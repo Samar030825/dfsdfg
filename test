@@ -1,52 +1,67 @@
 print("NUMBER GUESSING GAME")
 
 secret = 13
-chance = 5
-print(f"I have a secret no. and you only have {chance} chances to guess the secret number")
+player_guess = 5
+print(f"I have a secret no. and you only have {player_guess} chances to guess the secret number")
 print("It is between 1 and 50")
-player_guess = 0
 
 while player_guess == 5:
-    print()
     first_chance =int(input("Enter your first guess"))
     if first_chance == 13:
+        player_guess += 1
         print("congratulation ! You got it correct on your first try .")
     else:
         print("Wrong answer! hint - if it was in celcius it would be cold")
-    player_guess += 1
+    print()
+    if first_chance == 13:
+        break
+    else:
+        print("Next chance")
 
     second_chance =int(input("Enter your second guess"))
     if second_chance == 13:
+        player_guess += 1
         print("congratulation ! You got it correct on your second try .")
     else:
         print("Wrong answer! You are getting close")
-    player_guess += 1
+    print()
+    if second_chance == 13:
+        break
+    else:
+        print("Next chance")
 
     third_chance =int(input("Enter your third guess"))
     if third_chance == 13:
+        player_guess += 1
         print("congratulation ! You got it correct on your third try .")
     else:
          print("Wrong answer! You are getting really close")
-    player_guess += 1
+    print()
+    if third_chance == 13:
+        break
+    else:
+        print("Next chance")
 
     fourth_chance =int(input("Enter your fourth guess"))
     if fourth_chance == 13:
+       player_guess += 1
        print("congratulation ! You got it correct on your fourth try .")
     else:
         print("Wrong answer! Hint - it is between 10 and 15")
-    player_guess += 1
+    print()
+    if fourth_chance == 13:
+        break
+    else:
+        print("Next chance")
 
-    last_chance = int(input("Enter your last guess"))
-    if last_chance == 13:
+    fifth_chance = int(input("Enter your last guess"))
+    if fifth_chance == 13:
+        player_guess += 1
         print("Nice! you get the no. on your last chance")
     else:
         print("Oh no ! You lose")
-        print()
+    print()   
     break
-
-if  last_chance == 13:
-   print("You win the game !")
-else:
-    print("You lose! Secret :" , secret)
+print("Game over!")
 
     
